@@ -1,0 +1,144 @@
+/* ===============================
+   PT Sawit Admin Dashboard
+   style.css
+   =============================== */
+
+/* Reset & Base */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  background: linear-gradient(180deg, #14532d, #166534);
+  color: #fff;
+  z-index: 1030;
+  transition: all 0.3s ease;
+}
+
+.sidebar .brand {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.sidebar .nav-link i {
+  width: 22px;
+  text-align: center;
+}
+
+.sidebar .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* Sidebar collapsed */
+.sidebar.sidebar-collapsed {
+  width: 70px;
+}
+
+.sidebar.sidebar-collapsed .nav-text,
+.sidebar.sidebar-collapsed .brand .small,
+.sidebar.sidebar-collapsed .brand div:nth-child(2),
+.sidebar.sidebar-collapsed .mt-auto {
+  display: none;
+}
+
+.sidebar.sidebar-collapsed .nav-link {
+  justify-content: center;
+}
+
+/* Content area */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.content-wide {
+  margin-left: 70px;
+}
+
+/* Topbar */
+#mainContent .btn-light {
+  background: #fff;
+  border-color: #ddd;
+}
+
+/* KPI Cards */
+.kpi-card {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+}
+
+.kpi-card .chip {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Table */
+.table thead th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+}
+
+.table tbody td {
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* Forms */
+.form-control, .form-select {
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991.98px) {
+  .sidebar {
+    left: -250px;
+  }
+  .sidebar.show {
+    left: 0;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
